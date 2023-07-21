@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+  .hero-section {
+    background-image: url("data:image/jpeg;base64,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");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  #about {
+    background: #617c8d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  #certificates {
+    background: #b11747;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  #contact {
+    background: #eeeeea;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7a907a, #737554);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ced6ce, #adb32d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+</style>
+
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certificates">Certificates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+ <section id="hero" class="hero-section bg-primary text-white text-center py-5">
+
+  <h1>Welcome to My Portfolio</h1>
+  
+
+ </section>
+  <!-- About Me Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="row mt-3">
+      <div class="col mb-3">
+        <div class="row">
+          <div class="col d-flex">
+            <img class="rounded" src="Resourses/My Photo.jpg" alt="my pic" width="250px" height="250px">
+            <div class="details d-flex flex-column justify-content-center align-content-center text-wrap  px-5" style="width: 100%;">
+              <p class="text-wrap fw-bold "><b>Name: </b>Manyam Tharun</p>
+              <p class="fw-bold "><b>Mail: </b>tharun.vemu.cse@gmail.com</p>
+              <h4><b>Skills</b></h4>
+              <p>HTML</p>
+              <P>CSS</P>
+              <p>Bootstrap</p>
+              <p>Python</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col fs-5" >
+        <p>As a passionate and dedicated frontend developer, I aim to bring creativity and a strong willingness to learn to every project I undertake. With a solid foundation in HTML, CSS, and JavaScript, I strive to contribute to the development of intuitive and visually appealing user interfaces that leave a lasting impact.</p>
+        <p >As an aspiring frontend developer, I am driven by a deep curiosity for web technologies and a desire to create delightful user experiences. With a keen eye for design and a commitment to staying current with industry trends, I am eager to contribute my skills to building modern, responsive, and user-centric websites.</p>
+      </div>
+  </section>
+  
+  <!-- Certificate Section with Carousel -->
+  <section id="certificates" class="bg-light py-5">
+    <div class="container">
+      <h2>Certificates</h2>
+      <div id="certificateCarousel" class="carousel slide" data-ride="carousel" data-bs-interval="3000">
+        <!-- <ol class="carousel-indicators">
+          <li data-target="#certificateCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#certificateCarousel" data-slide-to="1"></li>
+          <li data-target="#certificateCarousel" data-slide-to="2"></li>
+          <li data-target="#certificateCarousel" data-slide-to="3"></li>
+        </ol> -->
+        <div class="carousel-inner">
+        <div class="carousel-item active" >
+          <div class="fluid-container w-100 d-flex justify-content-center">
+            <div class="card" style="width: 48rem;">
+              <img src="Resourses/Data Analytics.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Data Analytics</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" >
+          <div class="fluid-container w-100 d-flex justify-content-center">
+            <div class="card" style="width: 48rem;">
+              <img src="Resourses/Hackothon.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Hackathon</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="fluid-container w-100 d-flex justify-content-center">
+            <div class="card" style="width: 48rem;">
+              <img src="Resourses/Solelearn.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Solo Learn</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="carousel-item">
+        <div class="fluid-container w-100 d-flex justify-content-center">
+          <div class="card h-100" style="width: 48rem;">
+            <img src="Resourses/Python.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+        <a class="carousel-control-prev" href="#certificateCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#certificateCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Me Section with Map -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control mb-2" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control mb-2" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Send Message</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30095.856202320858!2d78.9585511510243!3d13.156784982528253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad67affcec8c93%3A0x1fd07f5e9538923f!2sMadireddipalle%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1689953142099!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer>
+  <div class="bg-dark text-white text-center pt-2" style="height: 3rem;">Copyright all rights reserved by Manyam Tharun</div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+</body>
+</html>
